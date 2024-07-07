@@ -1,0 +1,197 @@
+:root{
+--Soft-red: hsl(10, 79%, 65%);
+--Cyan: hsl(186, 34%, 60%);
+--Dark-brown: hsl(25, 47%, 15%);
+--Medium-brown: hsl(28, 10%, 53%);
+--Cream: hsl(27, 66%, 92%);
+--Very-pale-orange: hsl(33, 100%, 98%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.root{
+    width: 350px;
+    height: 300px;
+    background-color:transparent;
+}
+@media screen and (max-width:480px) {
+    .root{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--Cream);
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+.container >.root>.heading{
+    width: 100%;
+    background-color: var(--Soft-red);
+    padding:20px 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+@media screen and (max-width:480px) {
+    
+.container >.root>.heading{
+    padding: 30px 10px;
+}
+}
+
+.container >.root>.heading > .h1{
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--Very-pale-orange);
+    font-weight: 700;
+}
+.container >.root>.heading>.h1>.name{
+    font-family: "(https://fonts.google.com/specimen/DM+Sans)";
+    font-weight: 700;
+    font-size: 10px;
+}
+.container>.root> .container2{
+    width: 100%;
+    background-color: var(--Very-pale-orange);
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+.container>.root> .container2>.heading{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;   
+}
+.container>.root> .container2>.days{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: subgrid;
+}
+.container>.root> .container2>.days>div{
+    font-size: 13px;
+    display:flex;
+    flex-direction: column;
+    margin-right: 1px;
+    justify-content: end;
+
+    
+
+}
+.container>.root> .container2>.days>div>.column{
+    margin: 0 auto;
+    border-radius: 3px;
+}
+.container>.root> .container2>.days>div:hover{
+    cursor: pointer;
+}
+.container>.root> .container2>.days>div>.amount{
+    color: var(--Very-pale-orange);
+    background-color: var(--Dark-brown);
+    margin: 2px auto;
+    padding: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 3px;
+    width: 90%;
+    font-size: 10px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container>.root> .container2>.days>div>.day{
+    color: var(--Medium-brown);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    font-size: 10px ;
+    font-weight: 700;
+}
+.container>.root> .container2>.days>.mon>.column{
+    width: 20px;
+    height: 30px;
+    background-color: var(--Soft-red);
+}
+.container>.root> .container2>.days>.tue>.column{
+    width: 20px;
+    height: 45px;
+    background-color: var(--Soft-red);
+}
+.container>.root> .container2>.days>.wed>.column{
+    width: 20px;
+    height: 70px;
+    background-color: var(--Cyan);
+}
+.container>.root> .container2>.days>.thu>.column{
+    width: 20px;
+    height: 35px;
+    background-color: var(--Soft-red);
+}
+.container>.root> .container2>.days>.fri>.column{
+    width: 20px;
+    height: 40px;
+    background-color: var(--Soft-red);
+}
+.container>.root> .container2>.days>.sat>.column{
+    width: 20px;
+    height: 60px;
+    background-color: var(--Soft-red);
+}
+.container>.root> .container2>.days>.sun>.column{
+    width: 20px;
+    height: 45px;
+    background-color: var(--Soft-red);
+}
+hr{
+    width: 90%;
+    margin: 5px auto;
+    border: var(--Medium-brown) 1px solid;
+
+}
+.container >.root>.container2 >.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: subgrid;
+    justify-content: space-between;
+    padding: 20px;
+}
+.container >.root>.container2 >.footer:last-child{
+    display: flex;
+}
+.container >.root>.container2 >.footer>.text{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: subgrid;
+}
+.container >.root>.container2 >.footer>.text>.text1{
+    color: var(--Medium-brown);
+    font-size: 13px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container >.root>.container2 >.footer>.text>.price{
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container >.root>.container2 >.footer>.text>.price1{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-left: 70px;
+}
